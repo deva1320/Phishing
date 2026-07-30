@@ -16,6 +16,5 @@ form.addEventListener("submit", function (e) {
     });
 
     alert("Educational demonstration submitted.");
-
     form.reset();
 });
